@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <!-- 全屏模式配置开始 -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="我的应用">
-    <!-- 全屏模式配置结束 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>EPhone</title>
     <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
     <style>
@@ -3676,6 +3674,7 @@ document.addEventListener('touchmove', function(event) {
         event.preventDefault();
     }
 }, { passive: false });
+</script>
         <div id="phone-screen">
             <div id="status-bar">
                 <span id="status-bar-time">12:00</span>
