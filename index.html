@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="mobile-web-app-capable" content="yes">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>EPhone</title>
     <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
     <style>
@@ -3656,25 +3655,15 @@ input[type="checkbox"] {
     border-top-color: #333333;
       }
       
-    </style>
+    
+body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+</style>
 </head>
 <body>
-<script>
-// 防止链接跳出全屏模式
-document.addEventListener('click', function(e) {
-    if (e.target.tagName === 'A') {
-        e.preventDefault();
-        window.location.href = e.target.href;
-    }
-});
-
-// 防止页面缩放
-document.addEventListener('touchmove', function(event) {
-    if (event.scale !== 1) {
-        event.preventDefault();
-    }
-}, { passive: false });
-</script>
         <div id="phone-screen">
             <div id="status-bar">
                 <span id="status-bar-time">12:00</span>
